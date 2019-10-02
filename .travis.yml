@@ -2,6 +2,10 @@
 
 node_js: stable
 
+cache:
+    apt: true
+    directories:
+        - node_modules # 缓存不经常更改的内容
 install:
   - npm install
 
