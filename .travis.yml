@@ -15,6 +15,7 @@ script:
 
 after_script:
   - cd ./public
+  - touch CNAME && echo "hipye.top" > CNAME
   - git init
   - git config user.name "hipye"
   - git config user.email "morizen@163.com"
