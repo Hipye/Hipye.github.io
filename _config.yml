@@ -96,10 +96,10 @@ theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-# deploy:
+deploy:
   type: git
   repo: 
-      git: git@github.com:Hipye/hipye.github.io.git
-      coding: git@git.coding.net:Hipye/hipye.coding.me.git
+      git: git@github.com:Hipye/morizen.github.io.git
+      # coding: git@git.coding.net:Hipye/hipye.coding.me.git
   branch: master
   message: This is my Blog Add pages.

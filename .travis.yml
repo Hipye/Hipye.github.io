@@ -31,6 +31,6 @@ branches:
 env:
     global:
         # Github Pages
-        - GH_REF: github.com/Hipye/hipye.github.io.git #设置GH_REF，注意更改成自己的仓库地址
+        - GH_REF: github.com/Hipye/morizen.github.io.git #设置GH_REF，注意更改成自己的仓库地址
         # Coding Pages https://git.coding.net/hadronw/hadronw.git
         # - CO_REF: git.coding.net/Hipye/hipye.coding.me.git
