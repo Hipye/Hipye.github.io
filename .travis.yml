@@ -2,6 +2,10 @@
 
 node_js: stable
 
+cache:
+    apt: true
+    directories:
+        - node_modules # 缓存不经常更改的内容
 install:
   - npm install
 
@@ -16,7 +20,7 @@ after_script:
   - git config user.email "morizen@163.com"
   - git add .
   - git commit -m "Deploy blog pages"
-  - git push --force --quiet "https://${gh_token}@github.com/hipye/morizen.github.io" master:master
+  - git push --force --quiet "https://${gh_token}@github.com/hipye/hipye.github.io" master:master
 
 branches:
   only:
