@@ -22,7 +22,11 @@ after_script:
   - git add .
   - git commit -m "Deploy blog pages"
   - git push --force --quiet "https://${gh_token}@github.com/hipye/hipye.github.io" master:master
+  - git push --force --quiet "https://Hipye:${co_token}@${CO_REF}" master:master
 
+env:
+  global:
+    - CO_REF: git.coding.net/Hipye/hipye.coding.me.git
 branches:
   only:
     - hexo
