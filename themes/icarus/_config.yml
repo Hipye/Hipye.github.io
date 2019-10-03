@@ -72,7 +72,11 @@ search:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment
 comment:
     # Name of the comment plugin
-    type: 
+    type: gitment
+    owner: Hipye
+    repo: git@github.com:Hipye/hipye.github.io
+    client_id: 355b96928764f30b8b2b
+    client_secret: ff15c7914fc04d44b168e77b503a65be6aa98a37
 # Donation entries
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Donation/
 donate: 
