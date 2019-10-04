@@ -5,11 +5,19 @@
 # Site
 title: 拾集
 subtitle:
-description:
-keywords:
+description: 
+keywords: Linux·java·make
 author: Morizen
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
+
+#title 此处改为你站点的标题
+#subtitle 此处改为你站点的副标题
+#description 此处改为你站点的说明
+#keywords 此处改为你站点的关键字
+#author 此处改为你的名字
+#language 此处改为 zh-CN
+#timezone 此处改为 Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -103,3 +111,7 @@ deploy:
       # coding: git@git.coding.net:Hipye/hipye.coding.me.git
   branch: master
   message: This is my Blog Add pages.
+sitemap: 
+  path: sitemap.xml
+baidusitemap: 
+  path: baidusitemap.xml
