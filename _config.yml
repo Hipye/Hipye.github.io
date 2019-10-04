@@ -111,7 +111,7 @@ deploy:
 #       coding: git@git.coding.net:Hipye/hipye.coding.me.git
 #   branch: master
 #   message: This is my Blog Add pages.
-- type: baidu_url_submitter
+  - type: baidu_url_submitter
 sitemap: 
   path: sitemap.xml
 baidusitemap: 
