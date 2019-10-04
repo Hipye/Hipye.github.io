@@ -165,8 +165,7 @@ aria2c -v
 
 成功则显示如下
 
-![ture](https://ws3.sinaimg.cn/large/005BYqpggy1g24qn4l333j30hu09j0u6.jpg
-)
+![](https://i.loli.net/2019/10/04/ZulcfhyCTBbVe4X.jpg)
 
 下载文件时只需输入
 

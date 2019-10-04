@@ -20,5 +20,6 @@ abbrlink: 11259994
 top: true
 ---
 
-<p align="center"> [![Build Status](https://travis-ci.org/Hipye/hipye.github.io.svg?branch=hexo)](https://travis-ci.org/Hipye/hipye.github.io)这里是我的Page页面，添加各种心得. </p>
+<p align="center"> [![Build Status](https://travis-ci.org/Hipye/hipye.github.io.svg?branch=hexo)](https://travis-ci.org/Hipye/hipye.github.io) </p>
+这里是我的Page页面，添加各种心得. 
 
