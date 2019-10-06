@@ -11,9 +11,7 @@ categories:
 
 
 
-<p align="center"> [![Build Status](https://travis-ci.org/Hipye/hipye.github.io.svg?branch=hexo)](https://travis-ci.org) </p>
+[![Build Status](https://travis-ci.org/Hipye/hipye.github.io.svg?branch=hexo)](https://travis-ci.org)
 
-这里是我的Page页面，添加各种心得. 
-
-若此页面速度太慢请在网址前加上`www.`以访问备份
+这里是我的Page页面，添加各种心得. 若此页面速度太慢请在网址前加上`www.`以访问备份
 

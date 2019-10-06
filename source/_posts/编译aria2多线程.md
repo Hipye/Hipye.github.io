@@ -10,7 +10,7 @@ date: 2018-10-21 18:56:48
 
 
 
-## <p align="center"> 写在前面 </p>
+## 写在前面
 
 > ~~aria2主要功能当然是下载~~🙂虽然是废话但是既然叫做下载神器它的用处经过网络上各位大神轮番折腾 发掘出很多可以称得上老司机必备的功能。比如BT下载(全称: `Bittorrent` )/滑稽/  
 
@@ -40,7 +40,7 @@ sudo apt-get update && apt-get upgrade -y
 ```
 sudo apt-get install -y gcc libgnutls28-dev nettle-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev wget perl libsqlite3-dev pkg-config libcppunit-dev autoconf automake autotools-dev autopoint libtool git c++11 g++
 ```
-**2019.04.06   // 新增ubuntu18.10编译条件**
+**2019.04.06 //// 新增ubuntu18.10编译条件**
 ```
 sudo apt-get update && sudo apt-get install libgnutls28-dev nettle-dev libgmp-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev libsqlite3-dev pkg-config libcppunit-dev autoconf automake autotools-dev autopoint libtool git gcc g++ libxml2-dev make quilt
 
@@ -59,7 +59,7 @@ yum install gcc-g++ gcc -y
 wget https://github.com/aria2/aria2/archive/release-1.34.0.tar.gz
 ```
 
-解压**大佬们别介意我偷懒用通配符**😳
+解压😳
 
 ```
 tar zxvf *1.34*.gz
