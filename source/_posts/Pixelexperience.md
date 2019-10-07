@@ -71,6 +71,10 @@ echo "ro.setupwizard.mode=DISABLED" >>/system/build.prop
 [[Aex]](https://downloads.aospextended.com/) `听说是印度人人开发的包，之前用过觉得特色不错`
 [[Lineage]](https://download.lineageos.org/) `不废话`
 [[ResurrectionRemix]](https://get.resurrectionremix.com/) `以高定制而出名，曾经我最喜欢这个rom，然鹅隐性bug你能忍得了`
-[[Pe]](https://download.pixelexperience.org/)  `我当前正在用的包，优化得很舒服。最接近原生的rom之一`
-
+[[pixelexperience]](https://download.pixelexperience.org/)  `我当前正在用的包，优化得很舒服。最接近原生的rom之一`
+[[AOSiP]](https://aosip.dev/)`听说是AOSP的变种可定制也是挺多的`
+[[ArrowOS]](https://arrowos.net/)`emmm暂时还没用过`
+[[Cosmic-os]](https://cosmic-os.github.io/index.html)`同上`
+### 当然光有Rom还不够,还需要Gapps.
+[[Gapps]](https://sourceforge.net/projects/opengapps/)`没有谷歌套件的原生是没有灵魂的`
 ## 3. 个人收集的TG群组or网页链接
