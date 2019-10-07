@@ -36,7 +36,7 @@ npm -v
 ```
 
 ![成功.1](https://img02.sogoucdn.com/app/a/100520146/d427112def7648f6bbeabdde2dabd947)
-![成功.1](https://img02.sogoucdn.com/app/a/100520146/1b7d07f2516663828c3b353cf2c8c279)
+![成功.2](https://img02.sogoucdn.com/app/a/100520146/1b7d07f2516663828c3b353cf2c8c279)
 
 安装成功则输入如下
 

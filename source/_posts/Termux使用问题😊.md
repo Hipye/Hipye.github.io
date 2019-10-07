@@ -19,7 +19,7 @@ categories:
 
 [下载地址](https://www.coolapk.com/apk/com.termux)
 
-作者用的是腾讯学生云所以安装环境的过程稍微比较慢
+作者用的是国外的云所以安装环境的过程稍微比较慢
 
 成功如下
 
