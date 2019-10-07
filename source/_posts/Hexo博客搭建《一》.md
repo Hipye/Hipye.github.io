@@ -35,7 +35,8 @@ node -v
 npm -v
 ```
 
-![成功.1](https://ws1.sinaimg.cn/large/005Xh6Nfgy1fwobh4n6eqj30qq0g3gll.jpg)
+![成功.1](https://img02.sogoucdn.com/app/a/100520146/d427112def7648f6bbeabdde2dabd947)
+![成功.1](https://img02.sogoucdn.com/app/a/100520146/1b7d07f2516663828c3b353cf2c8c279)
 
 安装成功则输入如下
 

@@ -4,7 +4,6 @@ tags:
   - aria2
   - loader
 categories: aria2下载相关
-abbrlink: 58245
 date: 2018-10-21 18:56:48
 ---
 
@@ -131,7 +130,12 @@ new NumberOptionHandler(PREF_SPLIT, TEXT_SPLIT, '8', 1, -1, 's'));
 
 ------
 
+这里我放出我已经修改好的1.34版本128线程的源码包
+[128线程打包[github]](https://github.com/nkozhi/backups/blob/backup/exaria2.tar.gz)
+
+
 `这里我用的文本编辑器是nano没有则安装即可` 
+`nano保存退出的快捷键为ctrl+x 然后点击Y键即可`
 
 代码检查
 ```
@@ -146,8 +150,6 @@ sudo autoreconf -i
 `再次执行代码检查(若代码检查出现错误则执行此步骤)`
 
 **以上**
-
-`nano保存退出的快捷键为ctrl+x 然后点击Y键即可`
 
 ## Part_th
 
