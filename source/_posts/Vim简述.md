@@ -8,10 +8,10 @@ abbrlink: 1230
 date: 2019-04-23 01:20:20
 ---
 
-> 习惯使用linux系统的人，一定会调制一个得心应手的编辑器比如本人之前一直在用nano[[1]](https://it.m.wikipedia.org/wiki/Nano_editor)或如Vim[[2]](https://it.m.wikipedia.org/wiki/Vim_editor_di_testo)由于nano的局限性虽然易上手本人只好转而去熟悉vim编辑器。虽然vim的的操作性可以吹爆`linux or unix or windows三平台通用`，但是另一方面也增加了其难于上手的门槛😲
+### 习惯使用linux系统的人，一定会调制一个得心应手的编辑器比如本人之前一直在用nano[[1]](https://it.m.wikipedia.org/wiki/Nano_editor)或如Vim[[2]](https://it.m.wikipedia.org/wiki/Vim_editor_di_testo)由于nano的局限性虽然易上手本人只好转而去熟悉vim编辑器。虽然vim的的操作性可以吹爆`linux or unix or windows三平台通用`，但是另一方面也增加了其难于上手的门槛😲
 ---
-<!--more-->
 
+<!--more-->
 
 ## 安装Vim
 ```
