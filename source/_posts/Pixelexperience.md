@@ -10,7 +10,7 @@ abbrlink: 57591
 date: 2019-04-01 17:10:55
 ---
 
- ### 对于内核开源[[1]](https://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/4581071)的手机，国内外一些大神总会第一时间将其进行机型适配。以此开发了许许多多著名的ROM，例如~~`CM`~~现在是`Lineage`[[2]](https://www.lineageos.org/)`RR`[[3]](https://www.resurrectionremix.com/)添加了各式各样可玩性。当然这一切都归功于开源大法好`OpenSource`[[5]](https://www.google.com/search?source=hp&ei=5PazXNuIEMaHr7wPtOKC-AY&q=open+source&oq=opensou&gs_l=mobile-gws-wiz-hp.1.0.0i10l8.2920.5917..7454...0.0..0.367.550.0j1j0j1......0....1.......2..41j0.ek1BQ9GsYSo)
+ ### **对于内核开源[[1]](https://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/4581071)的手机，国内外一些大神总会第一时间将其进行机型适配。以此开发了许许多多著名的ROM，例如~~`CM`~~现在是`Lineage`[[2]](https://www.lineageos.org/)`RR`[[3]](https://www.resurrectionremix.com/)添加了各式各样可玩性。当然这一切都归功于开源大法好`OpenSource`[[5]](https://www.google.com/search?source=hp&ei=5PazXNuIEMaHr7wPtOKC-AY&q=open+source&oq=opensou&gs_l=mobile-gws-wiz-hp.1.0.0i10l8.2920.5917..7454...0.0..0.367.550.0j1j0j1......0....1.......2..41j0.ek1BQ9GsYSo)**
 <!--more-->
 ---
 ## 1. 机型是否能够解锁unlock
