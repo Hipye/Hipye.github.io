@@ -100,7 +100,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: icarus
+theme: cube
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -111,7 +111,7 @@ baidusitemap:
   path: baidusitemap.xml
 baidu_url_submit:
   count: 5 # 提交最新的一个链接
-  host: hipye.top # 在百度站长平台中注册的域名
+  host: www.omoe.cc # 在百度站长平台中注册的域名
   token: oHv3G5k8oMuDqTuE # 秘钥，百度站长平台 > 推送接口 > 接口调用地址中token字段
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
   # xz_appid: xxxxxx # 你的熊掌号 appid

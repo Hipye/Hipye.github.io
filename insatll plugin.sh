@@ -2,5 +2,5 @@ npm install  gulp gulp-clean-css gulp-uglify gulp-htmlmin gulp-imagemin gulp-htm
 hexo clean
 hexo g
 touch public/CNAME
-echo "hipye.top" > public/CNAME
+echo "www.omoe.cc" > public/CNAME
 hexo d

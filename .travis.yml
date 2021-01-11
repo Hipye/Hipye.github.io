@@ -16,12 +16,12 @@ script:
 
 after_script:
   - cd ./public
-  - touch CNAME && echo "hipye.top" > CNAME
+  - touch CNAME && echo "www.omoe.cc" > CNAME
   - git init
   - git config user.name "hipye"
-  - git config user.email "morizen@163.com"
+  - git config user.email "i@omoe.cc"
   - git add .
-  - git commit -m "Deploy blog pages"
+  - git commit -m "Deploy pages"
   - git push --force --quiet "https://${gh_token}@github.com/hipye/hipye.github.io" master:master
   - git push --force --quiet "https://Hipye:${co_token}@${CO_REF}" master:master
 
