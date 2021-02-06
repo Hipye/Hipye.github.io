@@ -17,3 +17,4 @@ alias gitconfig "git config --global user.email "i@omoe.cc" && git config --glob
 alias gc "git clone"
 
 alias aa "aria2c -x 16"
+alias cpfish "cp st/config.fish .config/fish/ && fish"
