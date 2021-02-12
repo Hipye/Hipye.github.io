@@ -8,7 +8,7 @@ alias ai "apt install -y"
 alias ug "apt update && apt upgrade -y"
 
 alias cdd "cd /data/data/com.termux/files"
-alias zzz "ssh moriz@192.168.8.172"
+alias zzz "ssh moriz@192.168.8.171"
 alias xxx "ssh root@192.168.8.234"
 alias ccc "ssh root@192.168.8.1"
 
