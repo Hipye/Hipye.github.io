@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>如何为一台路由器编译OpenWrt固件&#43;Actions云编译 - 拾集</title><meta name="Description" content=""><meta property="og:title" content="如何为一台路由器编译OpenWrt固件&#43;Actions云编译" />
+<meta property="og:description" content="买了个路由器总喜欢折腾一些从一开始用的别人编译的路由器得固件从潘多拉到OpenWrt用过零零散散得固件总觉得少了点什么 所以一时兴起自己搞起编" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.omoe.cc/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/" />
+<meta property="og:image" content="https://www.omoe.cc"/>
+<meta property="article:published_time" content="2021-01-13T15:32:50+00:00" />
+<meta property="article:modified_time" content="2021-01-13T15:32:50+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.omoe.cc"/>
+
+<meta name="twitter:title" content="如何为一台路由器编译OpenWrt固件&#43;Actions云编译"/>
+<meta name="twitter:description" content="买了个路由器总喜欢折腾一些从一开始用的别人编译的路由器得固件从潘多拉到OpenWrt用过零零散散得固件总觉得少了点什么 所以一时兴起自己搞起编"/>
+<meta name="application-name" content="Moriz Page">
+<meta name="apple-mobile-web-app-title" content="Moriz Page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.omoe.cc/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/" /><link rel="next" href="https://www.omoe.cc/picasso_rom/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "如何为一台路由器编译OpenWrt固件+Actions云编译",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.omoe.cc\/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91\/"
+        },"image": ["https:\/\/www.omoe.cc\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  933 ,
+        "url": "https:\/\/www.omoe.cc\/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91\/","datePublished": "2021-01-13T15:32:50+00:00","dateModified": "2021-01-13T15:32:50+00:00","license": "***","publisher": {
+            "@type": "Organization",
+            "name": "moriz","logo": "https:\/\/www.omoe.cc\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Moriz"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="拾集"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="拾集"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">如何为一台路由器编译OpenWrt固件&#43;Actions云编译</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Moriz</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-13">2021-01-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 933 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/" class="leancloud_visitors" data-flag-title="如何为一台路由器编译OpenWrt固件&#43;Actions云编译">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-编译的话需要得工具还有依赖">1. 编译的话需要得工具还有依赖</a></li>
+    <li><a href="#2-然后我们用的是的lean源码先clone-可能有点慢记得挂梯">2. 然后我们用的是的[lean]源码先clone 可能有点慢记得挂梯</a></li>
+    <li><a href="#3-使用第三方的的软件包">3. 使用第三方的的软件包</a></li>
+    <li><a href="#4-首次编译">4. 首次编译</a>
+      <ul>
+        <li><a href="#41-编译">4.1 编译</a></li>
+        <li><a href="#42-二次编译">4.2 二次编译</a></li>
+      </ul>
+    </li>
+    <li><a href="#5云编译">5.云编译</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>买了个路由器总喜欢折腾一些从一开始用的别人编译的路由器得固件从潘多拉到OpenWrt用过零零散散得固件总觉得少了点什么 所以一时兴起自己搞起编译固件
+首先使用的是win10的wsl内建ubuntu20.04开始编译但总是报错</p>
+<p>本地编译</p>
+<h2 id="1-编译的话需要得工具还有依赖">1. 编译的话需要得工具还有依赖</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get update sudo apt-get install git subversion g++ zlib1g-dev build-essential git python python3 python3-distutils libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev ecj fastjar java-propose-classpath sudo apt-get install build-essential libncursesw5-dev python unzip -y
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="2-然后我们用的是的lean源码先clone-可能有点慢记得挂梯">2. 然后我们用的是的[lean]源码先clone 可能有点慢记得挂梯</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone https://github.com/coolsnowwolf/lede.git 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="3-使用第三方的的软件包">3. 使用第三方的的软件包</h2>
+<p>既然开整那就弄点不一样的</p>
+<p>先编辑基础配置文件<font color="#009DDC"><strong>feeds.conf.default</strong></font></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo &#34;src-git lienol https://github.com/Lienol/openwrt-package&#34; &gt;&gt; feeds.conf.default 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="4-首次编译">4. 首次编译</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">./scripts/feeds clean ./scripts/feeds update -a &amp;&amp; ./scripts/feeds install -a make menuconfig 
+</code></pre></td></tr></table>
+</div>
+</div><p>前两项的必须选好 第一项是选择cpu的类别 第二项是你的路由型号</p>
+<h3 id="41-编译">4.1 编译</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">make download -j$(nproc) make -j$(nproc) V=s 
+</code></pre></td></tr></table>
+</div>
+</div><p>编译好的固件在/lede/bin/targets/xxx下</p>
+<h3 id="42-二次编译">4.2 二次编译</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">./scripts/feeds update -a &amp;&amp; ./scripts/feeds install -a make defconfig make -j8 download make -j$(($(nproc) + 1)) V=s 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="5云编译">5.云编译</h2>
+<ol>
+<li>注册一个github账号</li>
+</ol>
+<p>[点击跳转]相信这个不会难</p>
+<p>先fork一下 esirplayground 的源码</p>
+<ol start="2">
+<li>会看得懂.congfig</li>
+</ol>
+<p>我的配置内容如下
+p2w_r619ac</p>
+<p><font color="#009DDC">这里的.config文件会在自动编译被引用到注意.github/workflows下的Build_OP_##.yml 没有则自己新建*
+我的示例如下</font></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="err">#</span><span class="o">======================================</span><span class="p">=</span><span class="err">#</span> <span class="nx">Description</span><span class="p">:</span> <span class="nx">Build</span> <span class="nx">OpenWrt</span> <span class="nx">using</span> <span class="nx">GitHub</span> <span class="nx">Actions</span> <span class="err">#</span> <span class="nx">Lisence</span><span class="p">:</span> <span class="nx">MIT</span> 
+<span class="err">#</span> <span class="nx">Author</span><span class="p">:</span> <span class="nx">eSirPlayground</span> 
+<span class="err">#</span> <span class="nx">Youtube</span> <span class="nx">Channel</span><span class="p">:</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//goo.gl/fvkdwm #======================================= name: Build_R619AC on: release: types: [published] push: branches: - master #schedule: # - cron: 0 8 * * 5 #watch: # types: [started] jobs: build: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@master - name: Initialization environment env: DEBIAN_FRONTEND: noninteractive run: | docker rmi `docker images -q` echo &#34;Deleting files, please wait ...&#34; sudo rm -rf \ /usr/share/dotnet \ /etc/mysql \ /etc/php sudo -E apt-get -y purge \ azure-cli \ ghc* \ zulu* \ hhvm \ llvm* \ firefox \ google* \ dotnet* \ powershell \ openjdk* \ mysql* \ php* sudo -E apt-get update sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev patch unzip lib32gcc1 libc6-dev-i386 subversion flex node-uglify gcc-multilib g++-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils libelf-dev autoconf automake libtool autopoint device-tree-compiler libuv-dev python3.6 zlib1g-dev upx-ucl node-uglify antlr3 gperf sudo -E apt-get -y autoremove --purge sudo -E apt-get clean - name: Clone source code env: REPO_URL: https://github.com/coolsnowwolf/lede REPO_BRANCH: master run: | git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt cd openwrt sed -i &#39;5s/#//&#39; feeds.conf.default echo &#34;src-git lienol https://github.com/Lienol/openwrt-package&#34; &gt;&gt; feeds.conf.default - name: Update &amp; Install feeds working-directory: ./openwrt run: | ./scripts/feeds clean ./scripts/feeds update -a ./scripts/feeds install -a ./scripts/feeds install -a - name: Configuration Customization - Build_p2w-128m env: CONFIG_FILE: &#39;p2w_r619ac-128m.config&#39; run: | [ -e $CONFIG_FILE ] &amp;&amp; mv $CONFIG_FILE openwrt/.config chmod +x ./customize.sh &amp;&amp; ./customize.sh cd openwrt &amp;&amp; make defconfig - name: Download package working-directory: ./openwrt run: | make download -j$(nproc) find dl -size -1024c -exec ls -l {} \; find dl -size -1024c -exec rm -f {} \; - name: Build firmware working-directory: ./openwrt run: | echo -e &#34;$(nproc) thread build.&#34; make -j$(nproc) V=s - name : Upload artifact uses: actions/upload-artifact@master with: name: OpenWrt path: openwrt/bin 
+</span></code></pre></td></tr></table>
+</div>
+</div><p><code>在第76行处修改配置文件名</code>
+<code>在第78行处引用你自动编译的配置名</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">- name: Configuration Customization - ### 
+#这里修改得名字就是你自动打包后的文件名字 
+- env
+: CONFIG_FILE: &#39;###&#39; 
+#这里是你在根目录下自己修改的*.config 
+</code></pre></td></tr></table>
+</div>
+</div><p>第三方编译软件包 Lienol/openwrt
+官方原版地址 openwrt
+第三方固件地址 lede
+利用CI自动构建项目
+esirplayground/AutoBuild-OpenWrt
+Actions-OpenWrt</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-01-13</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E5%A6%82%E4%BD%95%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/picasso_rom/" class="next" rel="next" title="Picasso(Redmik305G)#sirius(XiaomiMi8se)#rom">Picasso(Redmik305G)#sirius(XiaomiMi8se)#rom<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"aKBVUH2Jr9Bu3ySOQJcfjeGy-gzGzoHsz","appKey":"OfFjaY4At138nq0ynrnz8FDm","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"data":{"id-1":"Moriz Page","id-2":"Moriz Page"},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

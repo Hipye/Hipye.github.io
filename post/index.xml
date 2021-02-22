@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on LoveIt</title>
+    <link>https://example.com/post/</link>
+    <description>Recent content in Posts on LoveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 06 Oct 2019 16:05:32 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网页导航</title>
+      <link>https://example.com/post/%E7%BD%91%E9%A1%B5%E5%AF%BC%E8%88%AA/</link>
+      <pubDate>Sun, 06 Oct 2019 16:05:32 +0000</pubDate>
+      
+      <guid>https://example.com/post/%E7%BD%91%E9%A1%B5%E5%AF%BC%E8%88%AA/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;网页导航是开启浏览器之后呈现的第一个页面，可以有很多的定制&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Leaning Android-studio</title>
+      <link>https://example.com/post/leaning-androidstudio/</link>
+      <pubDate>Tue, 30 Apr 2019 00:05:26 +0000</pubDate>
+      
+      <guid>https://example.com/post/leaning-androidstudio/</guid>
+      <description>&lt;p&gt;/////////////////&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vim使用简述</title>
+      <link>https://example.com/post/vim%E7%AE%80%E8%BF%B0/</link>
+      <pubDate>Tue, 23 Apr 2019 01:20:20 +0000</pubDate>
+      
+      <guid>https://example.com/post/vim%E7%AE%80%E8%BF%B0/</guid>
+      <description>&lt;h3 id=&#34;习惯使用linux系统的人一定会调制一个得心应手的编辑器比如本人之前一直在用nano1httpsitmwikipediaorgwikinano_editor或如vim2httpsitmwikipediaorgwikivim_editor_di_testo由于nano的局限性虽然易上手本人只好转而去熟悉vim编辑器虽然vim的的操作性可以吹爆linux-or-unix-or-windows三平台通用但是另一方面也增加了其难于上手的门槛&#34;&gt;&lt;strong&gt;习惯使用linux系统的人，一定会调制一个得心应手的编辑器比如本人之前一直在用nano&lt;a href=&#34;https://it.m.wikipedia.org/wiki/Nano_editor&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;[1]&lt;/a&gt;或如Vim&lt;a href=&#34;https://it.m.wikipedia.org/wiki/Vim_editor_di_testo&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;[2]&lt;/a&gt;由于nano的局限性虽然易上手本人只好转而去熟悉vim编辑器。虽然vim的的操作性可以吹爆&lt;code&gt;linux or unix or windows三平台通用&lt;/code&gt;，但是另一方面也增加了其难于上手的门槛&lt;/strong&gt;😲&lt;/h3&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pixelexperience简述</title>
+      <link>https://example.com/post/pixelexperience/</link>
+      <pubDate>Mon, 01 Apr 2019 17:10:55 +0000</pubDate>
+      
+      <guid>https://example.com/post/pixelexperience/</guid>
+      <description>&lt;h3 id=&#34;对于内核开源1httpsbaikebaiducomiteme5bc80e6ba90e6938de4bd9ce7b3bbe7bb9f4581071的手机国内外一些大神总会第一时间将其进行机型适配以此开发了许许多多著名的rom例如cm现在是lineage2httpswwwlineageosorgrr3httpswwwresurrectionremixcom添加了各式各样可玩性当然这一切都归功于开源大法好opensource5httpswwwgooglecomsearchsourcehpei5pazxnuiemahr7wptokc-ayqopensourceoqopensougs_lmobile-gws-wiz-hp100i10l82920591774540003675500j1j0j101241j0ek1bq9gsyso&#34;&gt;**对于内核开源&lt;a href=&#34;https://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/4581071&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;[1]&lt;/a&gt;的手机，国内外一些大神总会第一时间将其进行机型适配。以此开发了许许多多著名的ROM，例如~~&lt;code&gt;CM&lt;/code&gt;~~现在是&lt;code&gt;Lineage&lt;/code&gt;&lt;a href=&#34;https://www.lineageos.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;[2]&lt;/a&gt;&lt;code&gt;RR&lt;/code&gt;&lt;a href=&#34;https://www.resurrectionremix.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;[3]&lt;/a&gt;添加了各式各样可玩性。当然这一切都归功于开源大法好&lt;code&gt;OpenSource&lt;/code&gt;&lt;a href=&#34;https://www.google.com/search?source=hp&amp;amp;ei=5PazXNuIEMaHr7wPtOKC-AY&amp;amp;q=open&amp;#43;source&amp;amp;oq=opensou&amp;amp;gs_l=mobile-gws-wiz-hp.1.0.0i10l8.2920.5917..7454...0.0..0.367.550.0j1j0j1......0....1.......2..41j0.ek1BQ9GsYSo&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;[5]&lt;/a&gt;**&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>【置顶】欢迎来到我的Page</title>
+      <link>https://example.com/post/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84page/</link>
+      <pubDate>Wed, 19 Dec 2018 00:04:12 +0000</pubDate>
+      
+      <guid>https://example.com/post/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84page/</guid>
+      <description>这里是我的Page页面，添加各种心得. 若此页面速度太慢请在网址前加上www.以访问备份</description>
+    </item>
+    
+    <item>
+      <title>Termux使用问题</title>
+      <link>https://example.com/post/termux%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 07 Dec 2018 23:45:20 +0000</pubDate>
+      
+      <guid>https://example.com/post/termux%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;h3 id=&#34;钟爱命令行的大佬总会想尽方法的折腾虽然android本质是脱胎于linux但是功能上已经和相去甚远比如我喜欢在手机上用m笔记写上我在折腾上的一小点心得但是又嫌麻烦不想第二次转存到电脑上再用来解决一大类我所需要的难题&#34;&gt;&lt;strong&gt;钟爱命令行的大佬总会想尽方法的折腾，虽然android本质是脱胎于Linux但是功能上已经和相去甚远。比如我喜欢在手机上用M笔记写上我在折腾上的一小点心得，但是又嫌麻烦不想第二次转存到电脑上再用来解决一大类我所需要的难题。&lt;/strong&gt;&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexo博客搭建</title>
+      <link>https://example.com/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B8%80/</link>
+      <pubDate>Sun, 28 Oct 2018 16:33:18 +0000</pubDate>
+      
+      <guid>https://example.com/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B8%80/</guid>
+      <description>&lt;h3 id=&#34;用hexo来搭建轻量博客然后托管在git或者coding上一顿傻瓜式的操作基本上属于你的私人定制的个人博客就完成了&#34;&gt;&lt;strong&gt;用hexo来搭建轻量博客然后托管在&lt;code&gt;GIt&lt;/code&gt;或者&lt;code&gt;Coding&lt;/code&gt;上一顿傻瓜式的操作基本上属于你的私人定制的个人博客就完成了。&lt;/strong&gt;&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Miz share Apps</title>
+      <link>https://example.com/post/%E8%BD%AF%E4%BB%B6%E6%94%B6%E9%9B%86/</link>
+      <pubDate>Tue, 23 Oct 2018 15:56:48 +0000</pubDate>
+      
+      <guid>https://example.com/post/%E8%BD%AF%E4%BB%B6%E6%94%B6%E9%9B%86/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;因为国内独特的应用生态，所以臃肿多余是常态，手机的性能不出意外的被榨干🙂由于我用不习惯各种反人类逆潮流，收集了一些可以称得上是 &lt;code&gt;好用&lt;/code&gt; 的APP&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编译aria2多线程</title>
+      <link>https://example.com/post/%E7%BC%96%E8%AF%91aria2%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Sun, 21 Oct 2018 18:56:48 +0000</pubDate>
+      
+      <guid>https://example.com/post/%E7%BC%96%E8%AF%91aria2%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>&lt;h3 id=&#34;写在前面&#34;&gt;写在前面&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;del&gt;aria2主要功能当然是下载&lt;/del&gt;🙂虽然是废话但是既然叫做下载神器它的用处经过网络上各位大神轮番折腾 发掘出很多可以称得上老司机必备的功能。比如BT下载(全称: &lt;code&gt;Bittorrent&lt;/code&gt; )/滑稽/&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;使用文档&lt;/em&gt;&lt;br&gt;
+&lt;a href=&#34;https://aria2.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;官方文档(en)&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
