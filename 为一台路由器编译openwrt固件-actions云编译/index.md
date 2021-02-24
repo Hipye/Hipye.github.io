@@ -81,10 +81,13 @@ p2w_r619ac
 ```
 
 第三方编译软件包 Lienol/openwrt
+
 官方原版地址 openwrt
+
 第三方固件地址 lede
+
 利用CI自动构建项目
-esirplayground/AutoBuild-OpenWrt
-Actions-OpenWrt
+- esirplayground/AutoBuild-OpenWrt
+- Actions-OpenWrt
 
 
