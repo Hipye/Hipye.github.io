@@ -21,7 +21,7 @@ sudo curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo
 sudo chmod +x /usr/bin/repo
 ```
 ## 查找设备树
-进入[---twrp---](https://twrp.me/Devices) 寻找自己的设备型号，点击进入
+进入[___twrp___](https://twrp.me/Devices) 寻找自己的设备型号，点击进入
 点击`Device Tree / files`进入设备树github地址
 复制设备树github地址，稍后会用到
 根据设备树的安卓版本同步对应的omni源码
@@ -115,8 +115,8 @@ ccache是一个缓存工具，它通过将编译产生的中间文件（预处�
 export USE_CCACHE=1
 ###  改变ccache缓存路径
 export CCACHE_DIR=~/.ccache
-然后重启终端，或运行source ~/bashrc，使上述语句生效。
 
+然后重启终端，或运行source ~/bashrc，使上述语句生效。
 另外，可以设置ccache缓存所占磁盘空间的大小：
 
 ccache -M 50G

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.omoe.cc\/%E7%BC%96%E8%AF%91twrp\/"
-        },"image": ["https:\/\/www.omoe.cc\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  1287 ,
+        },"image": ["https:\/\/www.omoe.cc\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  1273 ,
         "url": "https:\/\/www.omoe.cc\/%E7%BC%96%E8%AF%91twrp\/","datePublished": "2021-02-04T07:34:59+00:00","dateModified": "2021-02-04T07:34:59+00:00","license": "***","publisher": {
             "@type": "Organization",
             "name": "moriz","logo": "https:\/\/www.omoe.cc\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">编译twrp</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Moriz</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-04">2021-02-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1287 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-04">2021-02-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1273 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/%E7%BC%96%E8%AF%91twrp/" class="leancloud_visitors" data-flag-title="编译twrp">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -173,7 +173,7 @@ sudo chmod +x /usr/bin/repo
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="查找设备树">查找设备树</h2>
-<p>进入<a href="https://twrp.me/Devices" target="_blank" rel="noopener noreffer">&mdash;twrp&mdash;</a> 寻找自己的设备型号，点击进入
+<p>进入<a href="https://twrp.me/Devices" target="_blank" rel="noopener noreffer"><em><strong>twrp</strong></em></a> 寻找自己的设备型号，点击进入
 点击<code>Device Tree / files</code>进入设备树github地址
 复制设备树github地址，稍后会用到
 根据设备树的安卓版本同步对应的omni源码
@@ -318,9 +318,9 @@ mPersist.SetValue(&#34;tw_screen_timeout_secs&#34;, &#34;0&#34;);
 <h3 id="启用ccache">启用ccache</h3>
 <p>export USE_CCACHE=1</p>
 <h3 id="改变ccache缓存路径">改变ccache缓存路径</h3>
-<p>export CCACHE_DIR=~/.ccache
-然后重启终端，或运行source ~/bashrc，使上述语句生效。</p>
-<p>另外，可以设置ccache缓存所占磁盘空间的大小：</p>
+<p>export CCACHE_DIR=~/.ccache</p>
+<p>然后重启终端，或运行source ~/bashrc，使上述语句生效。
+另外，可以设置ccache缓存所占磁盘空间的大小：</p>
 <p>ccache -M 50G</p>
 <h2 id="回到源码根目录准备编译">回到源码根目录，准备编译</h2>
 <div class="highlight"><div class="chroma">
