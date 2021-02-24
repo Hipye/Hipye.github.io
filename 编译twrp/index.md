@@ -21,7 +21,7 @@ sudo curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo
 sudo chmod +x /usr/bin/repo
 ```
 ## 查找设备树
-进入[https://twrp.me/Devices](https://twrp.me/Devices) 寻找自己的设备型号，点击进入
+进入[---twrp---](https://twrp.me/Devices) 寻找自己的设备型号，点击进入
 点击`Device Tree / files`进入设备树github地址
 复制设备树github地址，稍后会用到
 根据设备树的安卓版本同步对应的omni源码
@@ -40,19 +40,18 @@ sudo vim ~/omni/.repo/manifest.xm
 找到下面这句
 ```
 fetch="https://android.googlesource.com"
-
 将其更改为下面的其中一个：（自己视情况选择）
+
 清华大学AOSP镜像地址：
-
 fetch="https://aosp.tuna.tsinghua.edu.cn"
-中国科学技术大学AOSP镜像地址：
 
+中国科学技术大学AOSP镜像地址：
 fetch="git://mirrors.ustc.edu.cn/aosp"
 ```
 可以使用-j参数多开下载进程，适当提高下载效率。
 如有提示设置github邮箱和github用户名，请根据提示设置
 
-## 同步完成后进入device创建机型型号，然后同步设备树源码，步骤5的地址。
+## 同步完成后进入device创建机型型号,然后同步机型源码.
 ```
 mkdir -p device/xiaomi
 git clone https://github.com/TeamWin/android_device_xiaomi_sagit device/xiaomi/sagit
@@ -73,6 +72,7 @@ TARGET_PREBUILT_KERNEL := device/xiaomi/sagit/prebuilt/Image.gz-dtb
 打开data.cpp
 
 修改默认时区:
+```
 mPersist.SetValue(TW_TIME_ZONE_VAR, "CST6CDT,M3.2.0,M11.1.0");
 修改为
 mPersist.SetValue(TW_TIME_ZONE_VAR, "TAIST-8");
@@ -105,7 +105,7 @@ mPersist.SetValue("tw_screen_timeout_secs", "60");
 mPersist.SetValue("tw_screen_timeout_secs", "0");
 
 更多默认设置请自行发掘，基本都在这两个文件
-
+```
 ## 配置ccache
 ccache是一个缓存工具，它通过将编译产生的中间文件（预处理得到的代码、输出文件*.o等）缓存起来，待到下次编译同样源文件时直接复制而不是重新生成，以此来提高编译效率。最直接的好处，就是在make clean之后，重新编译的速度能够快不少。
 
@@ -114,7 +114,7 @@ ccache是一个缓存工具，它通过将编译产生的中间文件（预处�
 ###  启用ccache
 export USE_CCACHE=1
 ###  改变ccache缓存路径
-export CCACHE_DIR=/mnt/seagate_drive/.ccache
+export CCACHE_DIR=~/.ccache
 然后重启终端，或运行source ~/bashrc，使上述语句生效。
 
 另外，可以设置ccache缓存所占磁盘空间的大小：

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.omoe.cc\/%E7%BC%96%E8%AF%91twrp\/"
-        },"image": ["https:\/\/www.omoe.cc\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  1269 ,
+        },"image": ["https:\/\/www.omoe.cc\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  1287 ,
         "url": "https:\/\/www.omoe.cc\/%E7%BC%96%E8%AF%91twrp\/","datePublished": "2021-02-04T07:34:59+00:00","dateModified": "2021-02-04T07:34:59+00:00","license": "***","publisher": {
             "@type": "Organization",
             "name": "moriz","logo": "https:\/\/www.omoe.cc\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">编译twrp</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Moriz</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-04">2021-02-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1269 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-04">2021-02-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1287 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/%E7%BC%96%E8%AF%91twrp/" class="leancloud_visitors" data-flag-title="编译twrp">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -125,7 +125,7 @@
     <li><a href="#下载repo">下载repo</a></li>
     <li><a href="#查找设备树">查找设备树</a></li>
     <li><a href="#更换aosp镜像地址">更换aosp镜像地址</a></li>
-    <li><a href="#同步完成后进入device创建机型型号然后同步设备树源码步骤5的地址">同步完成后进入device创建机型型号，然后同步设备树源码，步骤5的地址。</a></li>
+    <li><a href="#同步完成后进入device创建机型型号然后同步机型源码">同步完成后进入device创建机型型号,然后同步机型源码.</a></li>
     <li><a href="#默认设置修改">默认设置修改:</a></li>
     <li><a href="#配置ccache">配置ccache</a>
       <ul>
@@ -173,7 +173,7 @@ sudo chmod +x /usr/bin/repo
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="查找设备树">查找设备树</h2>
-<p>进入<a href="https://twrp.me/Devices" target="_blank" rel="noopener noreffer">https://twrp.me/Devices</a> 寻找自己的设备型号，点击进入
+<p>进入<a href="https://twrp.me/Devices" target="_blank" rel="noopener noreffer">&mdash;twrp&mdash;</a> 寻找自己的设备型号，点击进入
 点击<code>Device Tree / files</code>进入设备树github地址
 复制设备树github地址，稍后会用到
 根据设备树的安卓版本同步对应的omni源码
@@ -206,23 +206,21 @@ repo sync -j8
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">fetch=&#34;https://android.googlesource.com&#34;
-
 将其更改为下面的其中一个：（自己视情况选择）
+
 清华大学AOSP镜像地址：
-
 fetch=&#34;https://aosp.tuna.tsinghua.edu.cn&#34;
-中国科学技术大学AOSP镜像地址：
 
+中国科学技术大学AOSP镜像地址：
 fetch=&#34;git://mirrors.ustc.edu.cn/aosp&#34;
 </code></pre></td></tr></table>
 </div>
 </div><p>可以使用-j参数多开下载进程，适当提高下载效率。
 如有提示设置github邮箱和github用户名，请根据提示设置</p>
-<h2 id="同步完成后进入device创建机型型号然后同步设备树源码步骤5的地址">同步完成后进入device创建机型型号，然后同步设备树源码，步骤5的地址。</h2>
+<h2 id="同步完成后进入device创建机型型号然后同步机型源码">同步完成后进入device创建机型型号,然后同步机型源码.</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -243,40 +241,84 @@ TW_DEFAULT_LANGUAGE := zh_CN</p>
 TARGET_PREBUILT_KERNEL := device/xiaomi/sagit/prebuilt/Image.gz-dtb</p>
 <p>回到源码根目录，进入<code>bootable/recovery</code>
 打开data.cpp</p>
-<p>修改默认时区:
-mPersist.SetValue(TW_TIME_ZONE_VAR, &ldquo;CST6CDT,M3.2.0,M11.1.0&rdquo;);
+<p>修改默认时区:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mPersist.SetValue(TW_TIME_ZONE_VAR, &#34;CST6CDT,M3.2.0,M11.1.0&#34;);
 修改为
-mPersist.SetValue(TW_TIME_ZONE_VAR, &ldquo;TAIST-8&rdquo;);</p>
-<p>mPersist.SetValue(TW_TIME_ZONE_GUISEL, &ldquo;CST6;CDT,M3.2.0,M11.1.0&rdquo;);
+mPersist.SetValue(TW_TIME_ZONE_VAR, &#34;TAIST-8&#34;);
+
+mPersist.SetValue(TW_TIME_ZONE_GUISEL, &#34;CST6;CDT,M3.2.0,M11.1.0&#34;);
 修改为
-mPersist.SetValue(TW_TIME_ZONE_GUISEL, &ldquo;TAIST-8;TAIDT&rdquo;);</p>
-<p>mPersist.SetValue(TW_TIME_ZONE_GUIDST, &ldquo;1&rdquo;);
+mPersist.SetValue(TW_TIME_ZONE_GUISEL, &#34;TAIST-8;TAIDT&#34;);
+
+mPersist.SetValue(TW_TIME_ZONE_GUIDST, &#34;1&#34;);
 修改为
-mPersist.SetValue(TW_TIME_ZONE_GUIDST, &ldquo;0&rdquo;);</p>
-<p>默认24小时制:
-mPersist.SetValue(&ldquo;tw_military_time&rdquo;, &ldquo;0&rdquo;);
+mPersist.SetValue(TW_TIME_ZONE_GUIDST, &#34;0&#34;);
+
+默认24小时制:
+mPersist.SetValue(&#34;tw_military_time&#34;, &#34;0&#34;);
 改为
-mPersist.SetValue(&ldquo;tw_military_time&rdquo;, &ldquo;1&rdquo;);</p>
-<p>默认无震动:
-mPersist.SetValue(&ldquo;tw_button_vibrate&rdquo;, &ldquo;80&rdquo;);
-mPersist.SetValue(&ldquo;tw_keyboard_vibrate&rdquo;, &ldquo;40&rdquo;);
-mPersist.SetValue(&ldquo;tw_action_vibrate&rdquo;, &ldquo;160&rdquo;);
+mPersist.SetValue(&#34;tw_military_time&#34;, &#34;1&#34;);
+
+默认无震动:
+mPersist.SetValue(&#34;tw_button_vibrate&#34;, &#34;80&#34;);
+	mPersist.SetValue(&#34;tw_keyboard_vibrate&#34;, &#34;40&#34;);
+	mPersist.SetValue(&#34;tw_action_vibrate&#34;, &#34;160&#34;);
 改为
-mPersist.SetValue(&ldquo;tw_button_vibrate&rdquo;, &ldquo;0&rdquo;);
-mPersist.SetValue(&ldquo;tw_keyboard_vibrate&rdquo;, &ldquo;0&rdquo;);
-mPersist.SetValue(&ldquo;tw_action_vibrate&rdquo;, &ldquo;0&rdquo;);</p>
-<p>关闭屏幕超时:
-mPersist.SetValue(&ldquo;tw_screen_timeout_secs&rdquo;, &ldquo;60&rdquo;);
+mPersist.SetValue(&#34;tw_button_vibrate&#34;, &#34;0&#34;);
+	mPersist.SetValue(&#34;tw_keyboard_vibrate&#34;, &#34;0&#34;);
+	mPersist.SetValue(&#34;tw_action_vibrate&#34;, &#34;0&#34;);
+
+关闭屏幕超时:
+mPersist.SetValue(&#34;tw_screen_timeout_secs&#34;, &#34;60&#34;);
 改为
-mPersist.SetValue(&ldquo;tw_screen_timeout_secs&rdquo;, &ldquo;0&rdquo;);</p>
-<p>更多默认设置请自行发掘，基本都在这两个文件</p>
-<h2 id="配置ccache">配置ccache</h2>
+mPersist.SetValue(&#34;tw_screen_timeout_secs&#34;, &#34;0&#34;);
+
+更多默认设置请自行发掘，基本都在这两个文件
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置ccache">配置ccache</h2>
 <p>ccache是一个缓存工具，它通过将编译产生的中间文件（预处理得到的代码、输出文件*.o等）缓存起来，待到下次编译同样源文件时直接复制而不是重新生成，以此来提高编译效率。最直接的好处，就是在make clean之后，重新编译的速度能够快不少。</p>
 <p>在~/.bashrc的尾部加上以下语句，启用ccache。ccache默认存放在用户目录下（~/.ccache），可以更改环境变量CCACHE_DIR，以设置到其他磁盘分区。</p>
 <h3 id="启用ccache">启用ccache</h3>
 <p>export USE_CCACHE=1</p>
 <h3 id="改变ccache缓存路径">改变ccache缓存路径</h3>
-<p>export CCACHE_DIR=/mnt/seagate_drive/.ccache
+<p>export CCACHE_DIR=~/.ccache
 然后重启终端，或运行source ~/bashrc，使上述语句生效。</p>
 <p>另外，可以设置ccache缓存所占磁盘空间的大小：</p>
 <p>ccache -M 50G</p>

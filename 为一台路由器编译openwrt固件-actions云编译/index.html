@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.omoe.cc\/%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91\/"
-        },"image": ["https:\/\/www.omoe.cc\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  939 ,
+        },"image": ["https:\/\/www.omoe.cc\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  943 ,
         "url": "https:\/\/www.omoe.cc\/%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91\/","datePublished": "2021-02-04T07:39:44+00:00","dateModified": "2021-02-04T07:39:44+00:00","license": "***","publisher": {
             "@type": "Organization",
             "name": "moriz","logo": "https:\/\/www.omoe.cc\/images\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">为一台路由器编译OpenWrt固件&#43;Actions云编译</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Moriz</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-04">2021-02-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 939 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-04">2021-02-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 943 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/" class="leancloud_visitors" data-flag-title="为一台路由器编译OpenWrt固件&#43;Actions云编译">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -167,8 +167,8 @@ apt-get install build-essential libncursesw5-dev python unzip
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="添加第三方软件包">添加第三方软件包</h2>
-<p>既然开整那就弄点不一样的</p>
-<p>先编辑基础配置文件<font color="#009DDC"><strong>feeds.conf.default</strong></font></p>
+<p>既然开整那就弄点不一样的
+先编辑基础配置文件<font color="#009DDC"><strong>feeds.conf.default</strong></font></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -194,8 +194,7 @@ make menuconfig
 </div>
 </div><p>前两项的必须选好 第一项是选择cpu的类别 第二项是你的路由型号</p>
 <h3 id="dl包">dl包</h3>
-<p>由于国内的网络环境导致在下载所需软件包时会导致失败这里提供一个国内dl镜像
-<a href="https://gitee.com/tolqy/openwrt-lede-dl" target="_blank" rel="noopener noreffer">gitee</a></p>
+<p>由于国内的网络环境导致在下载所需软件包时会导致失败这里提供一个国内dl镜像<a href="https://gitee.com/tolqy/openwrt-lede-dl" target="_blank" rel="noopener noreffer">gitee</a></p>
 <h3 id="编译">编译</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -225,13 +224,8 @@ make -j(nproc) V=s
 </div>
 </div><h2 id="云编译">云编译</h2>
 <ol>
-<li>
-<p>注册一个github账号相信这个不会难
-先fork一下 esirplayground 的源码</p>
-</li>
-<li>
-<p>会看得懂.congfig</p>
-</li>
+<li>注册一个github账号相信这个不会难先fork一下 esirplayground 的源码</li>
+<li>会看得懂.congfig</li>
 </ol>
 <p>我的配置内容如下
 p2w_r619ac</p>
