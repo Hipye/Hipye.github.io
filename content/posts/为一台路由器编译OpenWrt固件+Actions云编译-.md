@@ -24,7 +24,6 @@ git clone https://github.com/coolsnowwolf/lede.git
 ## 添加第三方软件包
 
 既然开整那就弄点不一样的
-
 先编辑基础配置文件<font color="#009DDC">**feeds.conf.default**</font>
 ```
 echo "src-git hipye https://gitee.com/hipye/openwrt-packages" >> feeds.conf.default 
@@ -38,9 +37,10 @@ make menuconfig
 ```
 
 前两项的必须选好 第一项是选择cpu的类别 第二项是你的路由型号
+
 ### dl包
-由于国内的网络环境导致在下载所需软件包时会导致失败这里提供一个国内dl镜像
-[gitee](https://gitee.com/tolqy/openwrt-lede-dl)
+由于国内的网络环境导致在下载所需软件包时会导致失败这里提供一个国内dl镜像[gitee](https://gitee.com/tolqy/openwrt-lede-dl)
+
 ### 编译
 ```
 make download -j(nproc) make -j(nproc) V=s 
@@ -58,9 +58,7 @@ make -j(nproc) V=s
 
 ## 云编译
 
-1. 注册一个github账号相信这个不会难
-先fork一下 esirplayground 的源码
-
+1. 注册一个github账号相信这个不会难先fork一下 esirplayground 的源码
 2. 会看得懂.congfig
 
 我的配置内容如下
@@ -84,9 +82,12 @@ p2w_r619ac
 ```
 
 第三方编译软件包 Lienol/openwrt
+
 官方原版地址 openwrt
+
 第三方固件地址 lede
+
 利用CI自动构建项目
-esirplayground/AutoBuild-OpenWrt
-Actions-OpenWrt
+- esirplayground/AutoBuild-OpenWrt
+- Actions-OpenWrt
 
