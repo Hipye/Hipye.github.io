@@ -194,7 +194,7 @@ repo sync -j8
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="更换aosp镜像地址">更换aosp镜像地址</h2>
-<p>sudo vim ~/omni/.repo/manifest.xm</p>
+<p>sudo vim ~/omni/.repo/manifest.xml</p>
 <p>找到下面这句</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -238,7 +238,7 @@ TW_DEFAULT_BRIGHTNESS := 1843</p>
 <p>默认语言
 TW_DEFAULT_LANGUAGE := zh_CN</p>
 <p>内核文件路径，如果内核在其他目录则需要修改，默认即可。
-TARGET_PREBUILT_KERNEL := device/xiaomi/sagit/prebuilt/Image.gz-dtb</p>
+<code>TARGET_PREBUILT_KERNEL := device/xiaomi/sagit/prebuilt/Image.gz-dtb</code></p>
 <p>回到源码根目录，进入<code>bootable/recovery</code>
 打开data.cpp</p>
 <p>修改默认时区:</p>
@@ -297,12 +297,12 @@ mPersist.SetValue(&#34;tw_military_time&#34;, &#34;1&#34;);
 
 默认无震动:
 mPersist.SetValue(&#34;tw_button_vibrate&#34;, &#34;80&#34;);
-	mPersist.SetValue(&#34;tw_keyboard_vibrate&#34;, &#34;40&#34;);
-	mPersist.SetValue(&#34;tw_action_vibrate&#34;, &#34;160&#34;);
+mPersist.SetValue(&#34;tw_keyboard_vibrate&#34;, &#34;40&#34;);
+mPersist.SetValue(&#34;tw_action_vibrate&#34;, &#34;160&#34;);
 改为
 mPersist.SetValue(&#34;tw_button_vibrate&#34;, &#34;0&#34;);
-	mPersist.SetValue(&#34;tw_keyboard_vibrate&#34;, &#34;0&#34;);
-	mPersist.SetValue(&#34;tw_action_vibrate&#34;, &#34;0&#34;);
+mPersist.SetValue(&#34;tw_keyboard_vibrate&#34;, &#34;0&#34;);
+mPersist.SetValue(&#34;tw_action_vibrate&#34;, &#34;0&#34;);
 
 关闭屏幕超时:
 mPersist.SetValue(&#34;tw_screen_timeout_secs&#34;, &#34;60&#34;);

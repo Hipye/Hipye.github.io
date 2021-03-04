@@ -35,7 +35,7 @@ repo sync -j8
 ```
 ## 更换aosp镜像地址
 
-sudo vim ~/omni/.repo/manifest.xm
+sudo vim ~/omni/.repo/manifest.xml
 
 找到下面这句
 ```
@@ -66,7 +66,7 @@ TW_DEFAULT_BRIGHTNESS := 1843
 TW_DEFAULT_LANGUAGE := zh_CN
 
 内核文件路径，如果内核在其他目录则需要修改，默认即可。
-TARGET_PREBUILT_KERNEL := device/xiaomi/sagit/prebuilt/Image.gz-dtb
+`TARGET_PREBUILT_KERNEL := device/xiaomi/sagit/prebuilt/Image.gz-dtb`
 
 回到源码根目录，进入`bootable/recovery`
 打开data.cpp
@@ -92,12 +92,12 @@ mPersist.SetValue("tw_military_time", "1");
 
 默认无震动:
 mPersist.SetValue("tw_button_vibrate", "80");
-	mPersist.SetValue("tw_keyboard_vibrate", "40");
-	mPersist.SetValue("tw_action_vibrate", "160");
+mPersist.SetValue("tw_keyboard_vibrate", "40");
+mPersist.SetValue("tw_action_vibrate", "160");
 改为
 mPersist.SetValue("tw_button_vibrate", "0");
-	mPersist.SetValue("tw_keyboard_vibrate", "0");
-	mPersist.SetValue("tw_action_vibrate", "0");
+mPersist.SetValue("tw_keyboard_vibrate", "0");
+mPersist.SetValue("tw_action_vibrate", "0");
 
 关闭屏幕超时:
 mPersist.SetValue("tw_screen_timeout_secs", "60");

@@ -126,4 +126,5 @@ https://hugeota.d.miui.com/21.2.2/miui_PICASSO_21.2.2_b9be519a61_11.0.zip `卡�
 https://hugeota.d.miui.com/21.2.3/miui_PICASSO_21.2.3_2307ec632f_11.0.zip `卡刷包`  `开发版`
 
 
+https://hugeota.d.miui.com/21.3.3/miui_PICASSO_21.3.3_f18f697bce_11.0.zip `内测版` `卡刷包`
 
