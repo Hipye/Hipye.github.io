@@ -8,62 +8,62 @@
             <atom:link href="https://www.omoe.cc/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>为一台路由器编译OpenWrt固件&#43;Actions云编译</title>
-    <link>https://www.omoe.cc/%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/</link>
+    <link>https://www.omoe.cc/posts/%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91.html/</link>
     <pubDate>Thu, 04 Feb 2021 07:39:44 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91/</guid>
+    <guid>https://www.omoe.cc/posts/%E4%B8%BA%E4%B8%80%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BC%96%E8%AF%91openwrt%E5%9B%BA%E4%BB%B6-actions%E4%BA%91%E7%BC%96%E8%AF%91.html/</guid>
     <description><![CDATA[摘要 买了个路由器总喜欢折腾一些从一开始用的别人编译的路由器得固件从潘多拉到OpenWrt用过零零散散得固件总觉得少了点什么 所以一时兴起自己搞]]></description>
 </item><item>
     <title>编译twrp</title>
-    <link>https://www.omoe.cc/%E7%BC%96%E8%AF%91twrp/</link>
+    <link>https://www.omoe.cc/posts/%E7%BC%96%E8%AF%91twrp.html/</link>
     <pubDate>Thu, 04 Feb 2021 07:34:59 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/%E7%BC%96%E8%AF%91twrp/</guid>
+    <guid>https://www.omoe.cc/posts/%E7%BC%96%E8%AF%91twrp.html/</guid>
     <description><![CDATA[系统:Ubuntu16.04 内存:≥4G 磁盘空间:≥50G 安装系统环境变量 1 2 3 4 5 sudo apt update sudo apt install git-core gnupg flex bison gperf build-essential \ zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \ lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache \ libgl1-mesa-dev libxml2-utils]]></description>
 </item><item>
     <title>Linuxdepoly编译MySQL</title>
-    <link>https://www.omoe.cc/linuxdepoly%E7%BC%96%E8%AF%91mysql/</link>
+    <link>https://www.omoe.cc/posts/linuxdepoly%E7%BC%96%E8%AF%91mysql.html/</link>
     <pubDate>Thu, 04 Feb 2021 04:52:52 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/linuxdepoly%E7%BC%96%E8%AF%91mysql/</guid>
+    <guid>https://www.omoe.cc/posts/linuxdepoly%E7%BC%96%E8%AF%91mysql.html/</guid>
     <description><![CDATA[首先使用service mysql start 启动mysql服务，然后在终端执行 1 usermod -aG aid_inet mysql 然后开始设置初始密码等，执行 1 mysql_secure_installation ERROR 2002 (HY000): Can&rsquo;t connect to MySQL server on 默认的配置文件地址 1]]></description>
 </item><item>
     <title>Centos7开机自启</title>
-    <link>https://www.omoe.cc/centos7%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF/</link>
+    <link>https://www.omoe.cc/posts/centos7%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF.html/</link>
     <pubDate>Thu, 04 Feb 2021 02:13:19 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/centos7%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF/</guid>
+    <guid>https://www.omoe.cc/posts/centos7%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF.html/</guid>
     <description><![CDATA[一、添加开机自启服务 在CentOS 7中添加开机自启服务非常方便，只需要两条命令(以Jenkins为例)： systemctl enable jenkins.service #设置jenkins服务为自启]]></description>
 </item><item>
     <title>Aria2多线程</title>
-    <link>https://www.omoe.cc/aria2%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+    <link>https://www.omoe.cc/posts/aria2%E5%A4%9A%E7%BA%BF%E7%A8%8B.html/</link>
     <pubDate>Tue, 02 Feb 2021 16:26:31 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/aria2%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+    <guid>https://www.omoe.cc/posts/aria2%E5%A4%9A%E7%BA%BF%E7%A8%8B.html/</guid>
     <description><![CDATA[<h3 id="写在前面">写在前面</h3>
 <p><strong><del>aria2主要功能当然是下载</del>🙂虽然是废话但是既然叫做下载神器它的用处经过网络上各位大神轮番折腾 发掘出很多可以称得上老司机必备的功能。比如BT下载(全称: <code>Bittorrent</code> )/滑稽/</strong></p>
 <p><em>使用文档</em><br>
 <a href="https://aria2.github.io/" target="_blank" rel="noopener noreffer">官方文档(en)</a></p>]]></description>
 </item><item>
     <title>Linuxdepoly自用命令合集</title>
-    <link>https://www.omoe.cc/linuxdepoly%E8%87%AA%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</link>
+    <link>https://www.omoe.cc/posts/linuxdepoly%E8%87%AA%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86.html/</link>
     <pubDate>Tue, 02 Feb 2021 06:20:52 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/linuxdepoly%E8%87%AA%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</guid>
+    <guid>https://www.omoe.cc/posts/linuxdepoly%E8%87%AA%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86.html/</guid>
     <description><![CDATA[linuxdepoly自用命令合集 基础软件安装 1 apt install fish screen git wget nload htop fuse p7zip-full dh-make dpkg-dev debhelper fakeroot build-essential mariadb-server rclone vim -y 编译 1 2 wget https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz wget https://github.com/cloudreve/Cloudreve/releases/download/3.2.1/cloudreve_3.2.1_linux_arm64.tar.gz 添加开机自启脚本 1 2 3 4 5 6 7 8 9 10 11]]></description>
 </item><item>
     <title>Perom简述</title>
-    <link>https://www.omoe.cc/perom%E7%AE%80%E8%BF%B0/</link>
+    <link>https://www.omoe.cc/posts/perom%E7%AE%80%E8%BF%B0.html/</link>
     <pubDate>Tue, 02 Feb 2021 01:26:10 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/perom%E7%AE%80%E8%BF%B0/</guid>
+    <guid>https://www.omoe.cc/posts/perom%E7%AE%80%E8%BF%B0.html/</guid>
     <description><![CDATA[<p>对于内核开源<a href="https://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/4581071" target="_blank" rel="noopener noreffer">[1]</a>的手机，国内外一些大神总会第一时间将其进行机型适配。以此开发了许许多多著名的ROM，例如~~<code>CM</code>~~现在是<code>Lineage</code><a href="https://www.lineageos.org/" target="_blank" rel="noopener noreffer">[2]</a><code>RR</code><a href="https://www.resurrectionremix.com/" target="_blank" rel="noopener noreffer">[3]</a>添加了各式各样可玩性。当然这一切都归功于开源大法好<code>OpenSource</code><a href="https://www.google.com/search?source=hp&amp;ei=5PazXNuIEMaHr7wPtOKC-AY&amp;q=open&#43;source&amp;oq=opensou&amp;gs_l=mobile-gws-wiz-hp.1.0.0i10l8.2920.5917..7454...0.0..0.367.550.0j1j0j1......0....1.......2..41j0.ek1BQ9GsYSo" target="_blank" rel="noopener noreffer">[5]</a></p>]]></description>
 </item><item>
     <title>Picasso(Redmik305G)#sirius(XiaomiMi8se)#rom</title>
-    <link>https://www.omoe.cc/picasso_rom/</link>
+    <link>https://www.omoe.cc/posts/picassoredmik305g#siriusxiaomimi8se%23rom.html/</link>
     <pubDate>Sun, 17 Jan 2021 14:18:54 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://www.omoe.cc/picasso_rom/</guid>
+    <guid>https://www.omoe.cc/posts/picassoredmik305g#siriusxiaomimi8se%23rom.html/</guid>
     <description><![CDATA[https://bigota.d.miui.com/20.3.26/miui_MI8SE_20.3.26_335c159428_10.0.zip 卡刷包 https://bigota.d.miui.com/20.3.19/miui_MI8SE_20.3.19_73d8cc98c5_10.0.zip 卡刷包 https://bigota.d.miui.com/20.3.12/miui_MI8SE_20.3.12_68801a8645_10.0.zip 卡刷包 https://bigota.d.miui.com/20.3.5/miui_MI8SE_20.3.5_c819c23f8f_10.0.zip 卡刷包 https://bigota.d.miui.com/20.2.27/miui_MI8SE_20.2.27_4be3529921_10.0.zip 卡刷包 https://bigota.d.miui.com/20.1.16/miui_MI8SE_20.1.16_1f09c9e99b_10.0.zip 卡刷包 https://bigota.d.miui.com/20.1.9/miui_MI8SE_20.1.9_87dde6f09d_10.0.zip 卡刷包 https://bigota.d.miui.com/20.1.2/miui_MI8SE_20.1.2_8df188ec0c_10.0.zip 卡刷包 https://bigota.d.miui.com/9.12.26/miui_MI8SE_9.12.26_2184cf4a5e_10.0.zip 卡刷包 https://bigota.d.miui.com/9.12.19/miui_MI8SE_9.12.19_322e5eadb0_10.0.zip 卡刷包 https://bigota.d.miui.com/9.12.12/miui_MI8SE_9.12.12_a2e9f71599_10.0.zip 卡刷包 https://bigota.d.miui.com/9.12.5/miui_MI8SE_9.12.5_6a597d28d0_10.0.zip 卡刷包 https://bigota.d.miui.com/9.11.21/miui_MI8SE_9.11.21_f33d769c44_10.0.zip 卡刷包 https://bigota.d.miui.com/9.11.14/miui_MI8SE_9.11.14_9afc5412d6_10.0.zip 卡刷包 https://bigota.d.miui.com/9.11.7/miui_MI8SE_9.11.7_515dcc6e7f_10.0.zip 卡刷包 https://bigota.d.miui.com/9.10.31/miui_MI8SE_9.10.31_97be08a1c7_10.0.zip 卡刷包 https://bigota.d.miui.com/9.10.24/miui_MI8SE_9.10.24_7a4aed1a73_10.0.zip 卡刷包 https://bigota.d.miui.com/9.10.10/miui_MI8SE_9.10.10_83cd74bcfa_9.0.zip 卡]]></description>
 </item></channel>
 </rss>
