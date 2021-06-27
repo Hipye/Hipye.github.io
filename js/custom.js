@@ -68,8 +68,8 @@ $(function() {
 /* 轮播背景图片 */
 $(function () {
 	$.backstretch([
-		  "/images/background/60c97d3a34045c61594c91463b846f39.jpg",
-		  "/images/background/798fe8e1617a8f99f185fa8e4a350932.jpg",
-		  "/images/background/390f3fb55dd7fa45cb5e479fa9dc318c.jpg"
+		  "/images/background/26d064b9fee253877576f82be64bba5.jpg",
+		  "/images/background/e3f9d2e42f55764ad9d0b87715e5152.jpg",
+		  "/images/background/ed01ad02827742dacdb530918ac7f23.jpg"
 	], { duration: 60000, fade: 1500 });
 });
