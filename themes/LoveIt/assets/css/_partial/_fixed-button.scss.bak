@@ -36,6 +36,11 @@
   }
 }
 
+#back-to-top {
+  display: block;
+  bottom: 1.5rem;
+}
+
 #view-comments {
   bottom: 4.5rem;
 }

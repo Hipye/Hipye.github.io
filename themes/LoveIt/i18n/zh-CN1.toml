@@ -198,9 +198,3 @@ other = "更改"
 [deleted]
 other = "删除"
 # === shortcodes/version.html ===
-
-[outdatedInfoWarningBefore]
-  other = "本文最后更新于 "
-
-[outdatedInfoWarningAfter]
-  other = "，文中内容可能已过时，请谨慎使用。"
